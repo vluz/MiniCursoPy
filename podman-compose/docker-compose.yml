@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  minicursopy:
+    container_name: minicursopy
+    restart: always
+    build: .
+    networks:
+      - minicursopy_network
+    ports:
+      - "8888:8888"
+networks:
+  minicursopy_network:
+    driver: bridge
