@@ -1,9 +1,7 @@
 GoogleNews
 Pillow
-PyQRCode
 PyQt6
 PyQt6_sip
-Requests
 black
 colourlovers
 deepl
@@ -17,10 +15,15 @@ matplotlib
 newspaper4k
 numpy
 pandas
-pickle
 seaborn
 spacy
 streamlit
 wikipedia
 wordcloud
 yfinance
+segno
+qrcode-artistic
+dnspython
+ip2geotools
+Requests
+pickle
