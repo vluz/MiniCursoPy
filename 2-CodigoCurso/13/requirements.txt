@@ -1,0 +1,5 @@
+dnspython
+ip2geotools
+pandas
+Requests
+streamlit
