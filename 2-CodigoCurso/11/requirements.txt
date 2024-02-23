@@ -1,0 +1,3 @@
+segno
+qrcode-artistic
+streamlit
