@@ -27,3 +27,5 @@ dnspython
 ip2geotools
 Requests
 pickle
+pygame
+simpleaudio
