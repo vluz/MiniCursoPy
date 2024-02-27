@@ -4,7 +4,8 @@ MAINTAINER Victor Luz - vluz at me dot com
 
 # install essentials, required utils and make some configurations
 RUN apt update -y \
-    && apt install --yes --no-install-recommends build-essential nano openssh-server git software-properties-common wget curl bash firefox-esr libasound2-dev \
+    && apt install --yes --no-install-recommends build-essential nano openssh-server git \
+    software-properties-common wget curl bash firefox-esr libasound2-dev python3-tk \
     && rm -rf /var/lib/apt/lists/* \
     && mkdir /content \
     && chmod 777 /content \
