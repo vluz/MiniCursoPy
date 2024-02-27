@@ -33,6 +33,7 @@ RUN pip install --upgrade pip \
 # Expose all ports used
 EXPOSE 8888
 EXPOSE 80
+EXPOSE 443
 EXPOSE 8501
 
 # disable heath check
