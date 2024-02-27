@@ -1,3 +1,5 @@
+<img src="MiniCursoPython.jpg" width=50% height=50%>
+
 # Mini Curso Python
 
 Repositório de apresentação e pequenos programas 
