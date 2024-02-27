@@ -1,14 +1,18 @@
-FROM python:3.11.7-slim
+FROM python:3.10.13-slim
 
 # install essentials
 RUN apt update -y \
-    && apt install --yes --no-install-recommends build-essential nano openssh-server git software-properties-common wget curl bash \
+    && apt install --yes --no-install-recommends build-essential nano openssh-server git software-properties-common wget curl bash firefox-esr libasound2-dev \
     && rm -rf /var/lib/apt/lists/* \
     && mkdir /content \
+    && chmod 777 /content \
+    && wget https://github.com/browsh-org/browsh/releases/download/v1.8.0/browsh_1.8.0_linux_amd64.deb \
+    && apt install ./browsh_1.8.0_linux_amd64.deb \
+    && rm ./browsh_1.8.0_linux_amd64.deb \
     && mkdir /root/.jupyter
 
 # Copy examples
-RUN git clone https://github.com/vluz/MiniCursoPy.git
+RUN git clone https://github.com/vluz/MiniCursoPy.git /content
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -24,5 +28,5 @@ RUN pip install --upgrade pip \
     && echo "en_US.UTF-8 UTF-8" > /etc/locale.gen \
     && apt-get clean
 
-# run jupyter notebook
+# run
 CMD ["bash"]
