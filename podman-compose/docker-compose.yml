@@ -10,7 +10,7 @@ services:
       - "8888:8888"
       - "80:80"
       - "443:443"
-      - "8501"
+      - "8501:8501"
 networks:
   minicursopy_network:
     driver: bridge
