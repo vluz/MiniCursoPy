@@ -42,4 +42,6 @@ O exemplo 14 não pode correr na imagem pela mesma razão.
 Mais informação em https://developers.giphy.com/docs/api#quick-start-guide     
 
 
+Para correr o exemplo de Flask use `flask run --host=0.0.0.0`
 
+     
