@@ -1,4 +1,4 @@
-<img src="MiniCursoPython.jpg" width=50% height=50%>
+<img src="MiniCursoPython.jpg" width=33% height=33%>
 
 # Mini Curso Python
 
