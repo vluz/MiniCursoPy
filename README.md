@@ -16,8 +16,7 @@ Para criar a imagem:
 `cd podman_compose`     
 `podman build -t mini-curso-py .`
 ou
-`podman-compose build`
-
+`podman-compose build`     
 Correr com `podman run -it -p 8888:8888 -p 8501:8501 -p 5000:5000 mini-curso-py`
 
 
