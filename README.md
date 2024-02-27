@@ -20,4 +20,10 @@ Para criar a imagem:
 ou
 `podman-compose build`
 
-Correr com `podman run -it -p 8888:8888 -p 8501:8501 -P mini-curso-py`
+Correr com `podman run -it -p 8888:8888 -p 8501:8501 mini-curso-py`
+
+Para jupyter correr o comando dentro do contentor:     
+`jupyter notebook --ip=0.0.0.0 --allow-root`    
+A URL será  http://localhost:8888/tree?token=<token>     
+O token pode ser encontrado na consola.
+
