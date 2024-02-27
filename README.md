@@ -5,6 +5,12 @@
 Repositório de apresentação e pequenos programas 
 destinados a um curso livre de Python 3
 
-`git clone https://github.com/vluz/MiniCursoPy.git`
+Para poder correr o código:
 
-`pip install -r allreqs.txt`
+```git clone https://github.com/vluz/MiniCursoPy.git
+pip install -r requirements.txt```
+
+Para criar a imagem:
+
+```cd podman_compose
+podman build -t minipy .```
