@@ -11,6 +11,7 @@ services:
       - "80:80"
       - "443:443"
       - "8501:8501"
+      - "5000:5000"
 networks:
   minicursopy_network:
     driver: bridge
