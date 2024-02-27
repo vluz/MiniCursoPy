@@ -14,7 +14,10 @@ pip install -r requirements.txt
 
 Para criar a imagem:
 
-```
-cd podman_compose
-podman build -t minipy .
-```
+`cd podman_compose`
+
+`podman build -t mini-curso-py .`
+ou
+`podman-compose build`
+
+Correr com `podman run -it -p mini-curso-py`
