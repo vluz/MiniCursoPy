@@ -20,4 +20,4 @@ Para criar a imagem:
 ou
 `podman-compose build`
 
-Correr com `podman run -it -p 8888:8888 -p 80:80 -p 443:443 -p 8501:8501 mini-curso-py`
+Correr com `podman run -it -p 8888:8888 -p 8501:8501 -P mini-curso-py`
