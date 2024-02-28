@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MiniCursoPyNotas.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="mini-curso-python-3">Mini Curso Python 3</h1>
+<h4 id="victor-luz">Victor Luz</h4>
+<hr>
+<p>O meu nome é Victor Luz e carrego Python comigo à décadas, ou Python carrega comigo à décadas.</p>
+<p>Uma das duas, ou talvez ambas. Não sei.</p>
+<hr>
+<h2 id="1989">1989</h2>
+<pre><code> ⌾ Protestos na Praça Tiananmen 
+ ⌾ Lançamento da nave espacial Galileu pela NASA 
+ ⌾ A Guerra Fria termina na sequência da Conferência de Malta 
+ ⌾ O Muro de Berlim é derrubado 
+ ⌾ Exxon Valdez derrama 11 milhões de galões de petróleo
+ ⌾ A Nintendo lança o Game Boy
+ ⌾ Eleições livres na Polónia levam o Solidariedade ao poder
+</code></pre>
+<hr>
+<p>De acordo com a narrativa tradicional:</p>
+<p>Estávamos no Natal de 1989, a cidade é Amesterdão nos Países Baixos.</p>
+<p>Guido van Rossum estava sentado em casa a pensar como passar uma semana de férias enquanto o escritório estava fechado.
+Queria algo interessante para o manter ocupado.</p>
+<p>Nessa altura, estava a trabalhar no projeto Amoeba.
+Era um sistema distribuído baseado em microkernel para o qual ele estava a desenvolver utilitários de sistema.</p>
+<p>Durante o trabalho neste projeto, van Rossum apercebeu-se que codificar em C demorava muito tempo.
+Ele queria uma linguagem de script, mais fácil e legível do que os scripts de shell da altura.</p>
+<p>Com o tempo livre nesse Natal, van Rossum começou a desenvolver a ideia.</p>
+<p>De imediato, pensou no nome &quot;Python&quot; para o seu novo projeto.
+Era fã da trupe britânica de comédia Monty Python.
+Este era um nome adequadamente irreverente para o que era essencialmente um &quot;projeto de sucata&quot;.</p>
+<p>O nome era curto, cativante, um pouco ousado, e em consonância com a tradição de dar nomes famosos às linguagens de programação.</p>
+<p>Ele queria que esta nova linguagem fosse clara e fácil de aprender.
+Baseia-se numa utilização simplificada da língua inglesa e código-fonte aberto.</p>
+<p>A filosofia do Python está resumida em &quot;O ZEN de Python&quot;.</p>
+<hr>
+<h4 id="import-this">--&gt; <code>import this</code></h4>
+<ol>
+<li>Bonito é melhor do que feio.</li>
+</ol>
+<p>Um código bonito é melhor do que um código feio. Se dois trechos de código estiverem ambos a funcionar, mas um é simples e facilmente legível enquanto o outro é difícil de entender, o primeiro é definitivamente o vencedor.</p>
+<ol start="2">
+<li>Explícito é melhor do que implícito.</li>
+</ol>
+<p>O código deve ser compreensível para alguém que não sabe nada acerca do seu programa. Nenhum conhecimento prévio deve ser exigido.</p>
+<ol start="3">
+<li>Simples é melhor do que complexo.</li>
+</ol>
+<p>Se tiver um problema simples que possa ser resolvido com uma solução simples, avance.
+Se tiveres um problema complexo, divide-o em vários problemas que podem ser resolvidos com uma solução simples.</p>
+<ol start="4">
+<li>Complexo é melhor que complicado.</li>
+</ol>
+<p>Quando o problema requer uma solução complexa, ela não deve ser demasiado complicada. Código complicado deixa seus colegas confusos e consome toneladas de tempo e esforço para entender.</p>
+<ol start="5">
+<li>Liso é melhor do que agrupado.</li>
+</ol>
+<p>É um fã de organizar as coisas em categorias, subcategorias e sub-subcategorias?
+Quando se trata de organizar código, essa estrutura hierárquicas adicionam mais confusão do que organização.</p>
+<ol start="6">
+<li>Esparso é melhor que denso.</li>
+</ol>
+<p>Normalmente, é preferível ter várias linhas de código fáceis de seguir do que uma linha única e densa.</p>
+<ol start="7">
+<li>A legibilidade conta.</li>
+</ol>
+<p>Muitas vezes, os programadores tentam poupar tempo abreviando nomes de variáveis e funções ou saltando comentários.
+Lembre-se que pode escrever código apenas uma vez, mas outros terão de o ler várias vezes.
+Se quiser realmente poupar tempo, torne o seu código legível usando nomes de variáveis e funções fáceis de entender, documentação extensa e indentação correta.</p>
+<ol start="8">
+<li>Casos especiais não são suficientemente especiais para quebrar as regras.</li>
+</ol>
+<p>Em Python, existem boas práticas que tornam o teu código mais legível para outros programadores.
+Siga estas práticas em vez de fazer &quot;à sua maneira&quot;. Esta regra é especialmente importante quando cria módulos ou bibliotecas para outros usarem.</p>
+<ol start="9">
+<li>Embora a prática vença a pureza.</li>
+</ol>
+<p>Cada regra pode ter uma exceção. Se for mais prático resolver um problema &quot;à sua maneira&quot; e isso mantém o código legível, fácil de seguir, pode por vezes desviar-se das melhores práticas estabelecidas.
+Pode ser um desafio para os novos programadores navegar entre este e o princípio acima, mas fica mais fácil com a experiência.</p>
+<ol start="10">
+<li>Os erros nunca devem passar silenciosamente.</li>
+</ol>
+<p>Se houver um erro no seu programa, retornar nada ou apenas um código de erro, está a ter um erro silencioso. Isso não é bom.
+Silenciar erros eventualmente leva a bugs que são mais difíceis de eliminar.
+É melhor que um programa falhe do que silenciar um erro e continuar a correr.</p>
+<ol start="11">
+<li>A menos que explicitamente silenciado.</li>
+</ol>
+<p>Em alguns casos, você pode querer ignorar os erros que seu programa pode causar. Então a melhor prática é silenciar esse erro explicitamente no seu código.</p>
+<ol start="12">
+<li>Perante a ambiguidade, recuse a tentação de adivinhar.</li>
+</ol>
+<p>Se o seu código não estiver a funcionar, não tente cegamente soluções diferentes até que uma delas pareça funcionar.
+Poderá estar apenas a mascarar o problema em vez de o resolver.
+Em vez disso, aplique pensamento crítico para para compreender o problema e encontrar uma solução adequada.</p>
+<ol start="13">
+<li>Deve haver uma - e de preferência apenas uma - forma óbvia de o fazer.</li>
+</ol>
+<p>Existe flexibilidade quando se tem várias soluções para o mesmo problema. No entanto, isso também aumenta a complexidade e o esforço, pois é necessário estar familiarizado com todas as soluções possíveis.</p>
+<ol start="14">
+<li>Embora essa forma possa não ser óbvia à primeira vista, a menos que sejas holandês.</li>
+</ol>
+<p>Este princípio refere-se ao criador do Python, Guido van Rossum, que é Holandês. Obviamente, recordar e compreender qualquer regra em Python seria mais fácil para ele do que para qualquer outra pessoa.</p>
+<ol start="15">
+<li>Agora é melhor do que nunca.</li>
+</ol>
+<p>Este princípio tem pelo menos duas interpretações diferentes. Algumas pessoas pensam que ele se refere a loops infinitos e intermináveis que você, obviamente, deve evitar no seu código.
+Outra interpretação possível é que só precisa de evitar a procrastinação nos seus projetos de</p>
+<p>Não faz mal algum aceitar ambas as interpretações.</p>
+<ol start="16">
+<li>Embora nunca seja frequentemente melhor do que agora.</li>
+</ol>
+<p>Este princípio desenvolve as ideias do anterior.
+Se o aplicarmos diretamente ao nosso código, podemos dizer que é melhor esperar que um programa termine do que terminá-lo cedo e obter resultados incorretos.
+Se estivermos a falar de projetos de programação em geral, podemos interpretar este princípio como um apelo para pensar e planear o projeto em vez de nos lançarmos de cabeça.</p>
+<ol start="17">
+<li>Se a implementação for difícil de explicar, é uma má ideia.</li>
+</ol>
+<p>Se for difícil para si explicar a sua implementação aos seus colegas, é provável que tenha escrito um código mau. O mais provável é que o tenha feito muito complicado e violou alguns dos princípios acima.
+Tente simplificar sua solução até que você se sinta confortável em explicá-la a outros.</p>
+<ol start="18">
+<li>Se a implementação for fácil de explicar, pode ser uma boa ideia.</li>
+</ol>
+<p>Se conseguir explicar facilmente a sua implementação aos seus colegas, pode ser uma boa ideia.
+Pode ainda estar errada, mas está no bom caminho em termos de legibilidade e simplicidade do código.</p>
+<ol start="19">
+<li>Namespaces são uma boa ideia.</li>
+</ol>
+<p>Em Python, podes ter espaços de nomes isolados ou uma coleção de nomes que permitem que cada objeto do teu programa tenha um nome único.
+Estes criam um sistema onde os nomes num dos teus módulos não entram em conflito com os nomes de outro módulo.
+Isto torna-os mais úteis.</p>
+<hr>
+<h3 id="estat%C3%ADsticas-pypi">Estatísticas pypi:</h3>
+<p>503 888  projetos<br>
+5 227 010  versões<br>
+9 946 348  ficheiros<br>
+770 845  utilizadores<br>
+18 600  giga bytes de dados</p>
+<hr>
+<h3 id="python-3">Python 3</h3>
+<pre><code>⌾ Uma das linguagens mais utilizadas no mundo
+⌾ Funciona desde microprocessadores a centros de dados
+⌾ Fácil de aprender, fácil de ler, fácil de programar
+⌾ Milhares de bibliotecas disponíveis
+⌾ Livre e de código aberto
+⌾ Ferramentas de desenvolvimento livres
+</code></pre>
+<hr>
+<h3 id="projectos-em-companhias-baseadas-em-python">Projectos em companhias baseadas em Python</h3>
+<pre><code>YouTube
+Netflix
+Instagram
+Spotify
+Facebook
+PayPal
+Amazon
+Uber
+NASA
+Industrial Light and Magic
+Entre centenas e centenas de outros...
+</code></pre>
+<hr>
+<h3 id="rp2040">RP2040</h3>
+<p>O RP2040 inclui um processador Arm Cortex M0 modificado, com dois cores, corre à velocidade de 133MHz, dispõe de 264KB de SRAM e 2MB de armazenamento em memória flash.</p>
+<p>Mede 7mm por 7mm com ~3mm de altura.</p>
+<p>Pode ser programado MicroPython ou CircuitPython.</p>
+<p>Estas são versões otimizadas de Python desenhadas para correr em micro-controladores.</p>
+<p>Dispõe de hardware potente capaz de executar até mesmo estruturas de aprendizado de máquina como o TensorFlow Lite. Permite inferência a correr no chip, sem uso de hardware externo.</p>
+<p>Outros exemplos incluem vários processadores ARM, CC3200, esp8266, PIC da Microchip, STM32, entre outros.</p>
+<p>No mínimo o micro-controlador deve ter:</p>
+<ul>
+<li>56 KBytes de flash</li>
+<li>16 Kbytes de RAM</li>
+<li>Relógio de 80 MHz</li>
+</ul>
+<p>Estes são requerimentos extremamente conservadores.</p>
+<hr>
+<p>Do outro lado da escala podemos encontrar o Facebook, por exemplo.</p>
+<p>Dispõe de 85 edifícios em 18 centros de dados, com um total de área aproximadamente 3,7 kilometros quadrados, ou ~687 campos de futebol.</p>
+<hr>
+<h3 id="passamos-agora-%C3%A0-parte-pr%C3%A1tica-deste-curso">Passamos agora à parte prática deste curso.</h3>
+<p>Se algo não funcionar ou se tiverem duvidas, é favor interromper e assinalar imediatamente.</p>
+<p>É importante que cada passo seja completado com sucesso.</p>
+<hr>
+<h3 id="instalar-python">Instalar Python</h3>
+<p>https://www.python.org/downloads/</p>
+<p>V3.11.7</p>
+<p>--&gt; <code>python -V</code></p>
+<p>--&gt; <code>import antigravity</code></p>
+<p>--&gt; <code>exit()</code></p>
+<hr>
+<h3 id="instalar-git">Instalar git</h3>
+<p>O Git é um sistema de controlo de versões distribuído que rastreia as alterações em qualquer conjunto de ficheiros informáticos, normalmente utilizado para coordenar o trabalho entre programadores.</p>
+<p>Os seus objectivos incluem a velocidade, a integridade dos dados e o suporte de fluxos de trabalho distribuídos e não lineares.</p>
+<p>https://git-scm.com/downloads</p>
+<p>Instalar LFS</p>
+<p>--&gt; <code>git lfs install</code></p>
+<hr>
+<h3 id="instalar-vscodium">Instalar VSCodium</h3>
+<p>O Visual Studio Code, também vulgarmente designado como VSCode, é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS.</p>
+<p>As suas características incluem suporte para depuração, realce de sintaxe, conclusão inteligente de código, refactorização de código e Git incorporado.</p>
+<p>Os utilizadores podem alterar o tema, os atalhos de teclado, as preferências e instalar extensões que adicionam funcionalidades.</p>
+<p>Neste caso instalamos uma versão mais aberta que remove telemetria e comunicação com a Microsoft.</p>
+<p>https://vscodium.com</p>
+<h3 id="instalar-extens%C3%B5es-relevantes">Instalar Extensões Relevantes</h3>
+<ul>
+<li>Markdown Editor</li>
+<li>Markdown PDF</li>
+<li>Prettier - Code formatter</li>
+<li>Python OU MagicPython</li>
+</ul>
+<hr>
+<h3 id="instalar-ungoogled-chromium">Instalar ungoogled chromium</h3>
+<p>https://github.com/ungoogled-software/ungoogled-chromium</p>
+<p>Chromium é uma versão ligeira, livre e de código aberto do browser Chrome desenhada e mantida pela Google.</p>
+<p>Sem ter de iniciar sessão numa conta Google, o Chromium funciona
+muito bem em termos de segurança e privacidade. No entanto, o Chromium ainda tem alguma dependência dos serviços Web e binários da Google.</p>
+<p>Para além disso, Google concebeu o Chromium para ser fácil e intuitivo para os utilizadores, o que significa que compromete a transparência e o controlo das operações internas.</p>
+<p>O ungoogled chromium modifica o código original das seguintes formas:</p>
+<ul>
+<li>
+<p>Remove todos os restantes pedidos em segundo plano a quaisquer serviços Web durante a execução do navegador.</p>
+</li>
+<li>
+<p>Remove todo o código específico dos serviços Web da Google</p>
+</li>
+<li>
+<p>Remove todas as utilizações de binários pré-fabricados do código-fonte e substituí-los por alternativas fornecidas pelo utilizador, sempre que possível.</p>
+</li>
+<li>
+<p>Desativa as funcionalidades que inibem o controlo e a transparência e adiciona ou modifica as funcionalidades que as promovam.</p>
+</li>
+</ul>
+<p>Opcional:</p>
+<p>-Instalar uBlock Origin e LocalCDN</p>
+<hr>
+<h3 id="pip-jupyter-notebook-e-pipreqs">PIP, Jupyter notebook e pipreqs</h3>
+<p>PIP é um gestor de pacotes para Python que permite instalar e gerir bibliotecas e dependências que não fazem parte da biblioteca padrão do Python.</p>
+<p>--&gt; <code>pip -V</code></p>
+<p>Jupyter é um ambiente de desenvolvimento interativo baseado na Web para blocos de notas, código e dados.</p>
+<p>Oferece um design flexível e modular, resultados ricos, integração de grandes volumes de dados e suporte para vários utilizadores.</p>
+<p>--&gt; <code>pip install notebook</code></p>
+<p>--&gt; <code>jupyter notebook</code></p>
+<p>--&gt; <code>pip install pipreqs</code></p>
+<p>Opcional: Instalar Jupyter lab desktop</p>
+<p>https://github.com/jupyterlab/jupyterlab-desktop/releases</p>
+<p>Opcional: Instalar em ambiente virtual</p>
+<p>--&gt; <code>python -m venv &quot;venv&quot;</code></p>
+<hr>
+<h3 id="sites-relevantes">Sites relevantes:</h3>
+<pre><code>⌾ Github - https://github.com/
+⌾ Pypi - https://pypi.org/
+⌾ Google Collab - https://colab.research.google.com/
+⌾ Infinity Free - https://www.infinityfree.com/
+⌾ Render - https://render.com/
+⌾ Hugging Face - https://huggingface.co/
+⌾ Carbon - https://carbon.now.sh/
+⌾ Publii - https://getpublii.com/
+</code></pre>
+<hr>
+<h3 id="clonar-um-reposit%C3%B3rio">Clonar um repositório:</h3>
+<p>--&gt; <code>https://github.com/vluz/MiniCursoPy</code></p>
+<p>--&gt; <code>git clone https://github.com/vluz/MiniCursoPy.git</code></p>
+<hr>
+<h2 id="parte-pr%C3%A1tica">Parte prática</h2>
+<p>...</p>
+<hr>
+<h3 id="recursos-adicionais">Recursos Adicionais</h3>
+<p>Think Python:</p>
+<p>https://www.greenteapress.com/thinkpython/thinkpython.pdf</p>
+<p>Cursos livres no YouTube:</p>
+<p>https://www.youtube.com/watch?v=_uQrJ0TkZlc</p>
+<p>https://www.youtube.com/watch?v=eWRfhZUzrAc</p>
+<hr>
+<h3 id="ios-e-android">IOS e Android</h3>
+<p>https://apps.apple.com/us/app/carnets-jupyter/id1450994949</p>
+<p>https://apps.apple.com/us/app/libterm/id1380911705</p>
+<p>https://termux.dev/en/</p>
+<p>--&gt; <code>pkg install python</code></p>
+<p>https://dev.to/codeledger/how-to-get-visual-studio-code-to-run-in-termux-on-android-405j</p>
+<hr>
+<h2 id="obrigado">OBRIGADO!</h2>
+<hr>
+<h5 id="dedicado-%C3%A0-lana-por-suporte-e-paci%C3%AAncia">Dedicado à Lana por suporte e paciência.</h5>
+
+</body>
+</html>
