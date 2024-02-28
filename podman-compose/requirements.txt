@@ -29,3 +29,4 @@ Requests
 pickle5
 pygame
 simpleaudio
+pipreqs
