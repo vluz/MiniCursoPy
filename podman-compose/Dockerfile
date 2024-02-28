@@ -1,6 +1,6 @@
 FROM python:3.10.13-slim
 
-MAINTAINER Victor Luz - vluz at me dot com
+MAINTAINER Victor Luz - vluz AT me DOT com
 
 # install essentials, required utils and make some configurations
 RUN apt update -y \
