@@ -7,7 +7,7 @@ import streamlit as st
 st.title("TRADUTOR PARA INGLÊS")
 
 # Inicializar o tradutor DeepL com a chave de API fornecida
-translator = deepl.Translator("<CHAVE API VAI AQUI>")
+translator = deepl.Translator("<CHAVE API AQUI>")
 
 # Criar uma entrada de texto para o usuário inserir texto a ser traduzido
 text = st.text_input("Texto a traduzir para Inglês:")
