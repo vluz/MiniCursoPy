@@ -22,7 +22,7 @@ if gif_to_search:
     
     # Definir os parâmetros de pesquisa
     params = parse.urlencode(
-        {"api_key": "<API KEY GIPHY>", 
+        {"api_key": "<CHAVE API GIPHY AQUI>", 
         "q": gif_to_search, "limit": "4"}
     )
     
