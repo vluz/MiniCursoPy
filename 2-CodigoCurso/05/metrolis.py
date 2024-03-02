@@ -20,3 +20,4 @@ def get_metro_status():
     print(f"  Vermelha : {data['vermelha'].strip()}")
 
 get_metro_status()
+
