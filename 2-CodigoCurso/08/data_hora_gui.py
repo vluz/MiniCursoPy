@@ -28,3 +28,4 @@ mostrador.pack(anchor="center")
 atualiza()  # Inicia o processo de atualização
 
 mainloop()
+
