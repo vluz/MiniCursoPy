@@ -13,3 +13,4 @@ while True:
     nome = input('Entre o seu nome: ')
     diz_ola(nome)  # Chamar a função diz_ola para cumprimentar o usuário
     print("\n")
+    
