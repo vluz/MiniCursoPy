@@ -78,3 +78,4 @@ if st.button("Obter localização", type="primary"):
             st.write("ATENÇÃO: Localização pode estar errada.")
     else:
         st.write("O IP \"" + ip + "\" não é válido")
+
