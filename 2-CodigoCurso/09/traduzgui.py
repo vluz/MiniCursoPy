@@ -20,3 +20,4 @@ if text:
     # Exibir a tradução
     st.write("Tradução:")
     st.write(result.text)
+
