@@ -11,3 +11,4 @@ if pergunta:                           # Se houver uma pergunta, faz o seguinte:
     with st.spinner("a pensar..."):    #   Apresenta uma animação enquanto gera a resposta
         resposta = lm.do(pergunta)     #   Obtem resposta do modelo
     st.write(resposta)                 #   Escreve a resposta
+
