@@ -12,3 +12,4 @@ while True:
     # Imprimir data e hora com retorno do carro para reescrever a linha
     print(hoje + " " + agora, end="\r")
     time.sleep(1)
+
