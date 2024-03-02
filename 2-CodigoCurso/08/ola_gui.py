@@ -26,3 +26,4 @@ if st.button("Diz"):
         diz_ola(nome)
     else:
         st.write("Não entrou o seu nome!")
+
