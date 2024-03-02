@@ -84,3 +84,4 @@ if gif_to_search:
     else:
         # Mostrar uma mensagem de erro se houver um problema ao obter os GIFs
         st.write("Erro a obter GIFs")
+
