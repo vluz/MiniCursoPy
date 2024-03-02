@@ -9,3 +9,4 @@ wikipedia.set_lang("pt")
 result = wikipedia.page(title="Barreiro")
 # Imprimir o conteúdo da página
 print(result.content)
+
