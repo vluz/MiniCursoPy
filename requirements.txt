@@ -30,3 +30,4 @@ pickle5
 pygame
 simpleaudio
 pipreqs
+notebook
