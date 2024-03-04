@@ -26,7 +26,6 @@ qrcode-artistic
 dnspython
 ip2geotools
 Requests
-pickle5
 pygame
 simpleaudio
 pipreqs
