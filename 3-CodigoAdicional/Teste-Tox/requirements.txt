@@ -1,0 +1,4 @@
+pandas
+streamlit
+tensorflow
+tensorflow_intel

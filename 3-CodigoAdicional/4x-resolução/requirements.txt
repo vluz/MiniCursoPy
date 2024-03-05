@@ -1,0 +1,4 @@
+Pillow
+RealESRGAN
+streamlit
+torch
