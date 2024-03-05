@@ -11,7 +11,7 @@ Remove o fundo de uma imagem.
 ---
 
 ## rng-cave-unicode     
-Gera masmorra proceduralmente.
+Gera uma masmorra aleatória proceduralmente.
 
 ---
 
