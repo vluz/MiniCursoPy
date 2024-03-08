@@ -15,3 +15,5 @@ copy *.wav build\exe.win-amd64-3.10\
 copy icomoon.ttf build\exe.win-amd64-3.10\
 venv\Scripts\deactivate.bat
 ```
+
+Executavel `pares.exe` estará na dir `build\exe.win-amd64-3.10\`
