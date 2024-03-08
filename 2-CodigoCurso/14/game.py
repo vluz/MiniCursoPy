@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-import pygame
 import random
+import pygame
 import simpleaudio as sa
 
 
@@ -17,7 +17,7 @@ WIDTH, HEIGHT = 600, 600
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Encontra os pares")
 FPS = 30
-NUMBER_FONT = pygame.font.Font("Wingdings-Regular-Font.ttf", 55)
+NUMBER_FONT = pygame.font.Font("icomoon.ttf", 55)
 TEXT_FONT = pygame.font.SysFont("Arial", 55)
 GREEN = (0, 150, 136)
 WHITE = (236, 239, 241)
@@ -106,7 +106,7 @@ def main():
             mark = state["mark"]
         if mark is not None and show[mark]:
             x, y = (mark % 8) * 75, (mark // 8) * 75
-            text = NUMBER_FONT.render(chr(tiles[mark] + 64), 1, WHITE)
+            text = NUMBER_FONT.render(chr(tiles[mark] + ord("!")), 1, WHITE)
             WIN.blit(text, (x + 10, y + 10))
 
         if show.count(False) == 64:
@@ -131,4 +131,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
