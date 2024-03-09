@@ -354,9 +354,9 @@ https://github.com/aquasecurity/trivy
 
 ### Clonar um repositório:
 
---> `https://github.com/vluz/MiniCursoPy`
+--> `https://codeberg.org/vluz/MiniCursoPy`
 
---> `git clone https://github.com/vluz/MiniCursoPy.git`
+--> `git clone https://codeberg.org/vluz/MiniCursoPy`
 
 ---
 
