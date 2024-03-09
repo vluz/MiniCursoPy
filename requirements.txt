@@ -31,3 +31,4 @@ simpleaudio
 pipreqs
 notebook
 jupyterlab-language-pack-pt-BR
+cx_Freeze
