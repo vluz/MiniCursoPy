@@ -36,8 +36,8 @@ Os programas com tkinter só correm localmente, a imagem não tem GUI.
 O exemplo 14 não pode correr na imagem pela mesma razão.
 
 
-`ultimate_qr.py` requer uma chave de API     
-Mais informação em https://developers.giphy.com/docs/api#quick-start-guide     
+`traduzgui.py` e `ultimate_qr.py` requerem uma chave de API     
+Mais informação em API_KEYS.txt     
 
 
 Para correr o exemplo de Flask use `flask run --host=0.0.0.0`
