@@ -1,4 +1,5 @@
-icomoon.ttf by <a href="https://icomoon.io">IcoMoon</a>
+icomoon.ttf by <a href="https://icomoon.io">IcoMoon</a>      
+icomoon.json é o projecto da fonte em icomoon.io
 
 Sound Effects from <a href="https://pixabay.com">Pixabay</a>
 
