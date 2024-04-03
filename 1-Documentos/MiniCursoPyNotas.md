@@ -151,11 +151,11 @@ Isto torna-os mais úteis.
 
 ### Estatísticas pypi:
 
-503 888  projetos  
-5 227 010  versões  
-9 946 348  ficheiros  
-770 845  utilizadores  
-18 600  giga bytes de dados  
+527 487  projetos      
+5 541 634  versões      
+10 700 409  ficheiros      
+802 109  utilizadores      
+20.3  terabytes de dados      
 
 ---
 
@@ -170,7 +170,7 @@ Isto torna-os mais úteis.
 
 ---
 
-### Projectos em companhias baseadas em Python
+### Projetos em companhias baseadas em Python
 
     YouTube
     Netflix
@@ -227,7 +227,7 @@ Se algo não funcionar ou se tiverem duvidas, é favor interromper e assinalar i
 
 https://www.python.org/downloads/
 
-V3.11.7
+V3.10.11
 
 PATH + TK
 
@@ -247,7 +247,7 @@ Os seus objectivos incluem a velocidade, a integridade dos dados e o suporte de 
 
 https://git-scm.com/downloads
 
-Instalar LFS
+Ativar LFS
 
 --> `git lfs install`
 
@@ -267,10 +267,15 @@ https://vscodium.com
 
 ### Instalar Extensões Relevantes
 
+- Python
+- Black
+- PT_BR
+- Pylint
+
+Opção:
+
 - Markdown Editor
 - Markdown PDF
-- Prettier - Code formatter
-- Python OU MagicPython
 
 ---
 
@@ -342,7 +347,7 @@ https://github.com/aquasecurity/trivy
 
 ### Sites relevantes:
 
-    ⌾ Github - https://github.com/
+    ⌾ Github - https://github.com/ ~ CodeBerg - https://codeberg.org/
     ⌾ Pypi - https://pypi.org/
     ⌾ Google Collab - https://colab.research.google.com/
     ⌾ Infinity Free - https://www.infinityfree.com/
