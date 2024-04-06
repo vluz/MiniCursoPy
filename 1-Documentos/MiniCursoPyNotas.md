@@ -308,7 +308,9 @@ Opcional:
 
 ---
 
-### PIP, Jupyter notebook e pipreqs
+### PIP, C++ Build Tools, Jupyter notebook e pipreqs
+
+--> https://visualstudio.microsoft.com/visual-cpp-build-tools/
 
 PIP é um gestor de pacotes para Python que permite instalar e gerir bibliotecas e dependências que não fazem parte da biblioteca padrão do Python.
 
