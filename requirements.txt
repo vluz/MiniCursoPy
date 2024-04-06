@@ -28,6 +28,7 @@ ip2geotools
 Requests
 pygame
 simpleaudio
+# https://files.pythonhosted.org/packages/f8/f0/baa21582912d8e9734635ec5b74d03a56730997da371205bab353ec954c7/simpleaudio-1.0.4-cp38-cp38-win_amd64.whl
 pipreqs
 notebook
 jupyterlab-language-pack-pt-BR
