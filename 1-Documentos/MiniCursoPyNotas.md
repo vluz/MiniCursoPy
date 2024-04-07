@@ -213,6 +213,12 @@ Do outro lado da escala podemos encontrar o Facebook, por exemplo.
 
 Dispõe de 85 edifícios em 18 centros de dados, com um total de área aproximadamente 3,7 kilometros quadrados, ou ~687 campos de futebol.
 
+Discutir:
+
+https://rya.nc/sartre.html
+
+https://developers.google.com/silicon
+
 ---
 
 ### Passamos agora à parte prática deste curso.
@@ -227,6 +233,8 @@ Se algo não funcionar ou se tiverem duvidas, é favor interromper e assinalar i
 
 https://www.python.org/downloads/
 
+https://www.python.org/downloads/release/python-31011/
+
 V3.10.11
 
 PATH + TK
@@ -236,6 +244,8 @@ PATH + TK
 --> `import antigravity`
 
 --> `exit()`
+
+--> https://github.com/adang1345/PythonWindows
 
 ---
 
@@ -310,6 +320,12 @@ Opcional:
 
 ### PIP, C++ Build Tools, Jupyter notebook e pipreqs
 
+Upgrade PIP
+
+--> `pip install --upgrade pip`
+
+Instalar MS Visual C++ Build Tools
+
 --> https://visualstudio.microsoft.com/visual-cpp-build-tools/
 
 PIP é um gestor de pacotes para Python que permite instalar e gerir bibliotecas e dependências que não fazem parte da biblioteca padrão do Python.
@@ -364,6 +380,9 @@ https://github.com/aquasecurity/trivy
 --> `https://codeberg.org/vluz/MiniCursoPy`
 
 --> `git clone https://codeberg.org/vluz/MiniCursoPy`
+
+--> `cd MiniCursoPy`      
+--> `pip install -U -r requirements.txt`
 
 ---
 
