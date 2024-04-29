@@ -2,7 +2,9 @@
 
 # https://codeberg.org/vluz/MiniCursoPy
 
-Please follow link for latest version
+---
+
+---
 
 ---
 
