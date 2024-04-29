@@ -1,3 +1,12 @@
+# Projeto movido para CodeBerg.org devido a limitações do github:
+
+# https://codeberg.org/vluz/MiniCursoPy
+
+Please follow link for latest version
+
+---
+
+
 <img src="MiniCursoPython.jpg" width=33% height=33%>
 
 # Mini Curso Python
